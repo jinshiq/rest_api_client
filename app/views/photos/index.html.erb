@@ -1,0 +1,36 @@
+<%= render 'photo_menu' %>
+<br>
+
+<%= render 'form' %>
+<br>
+
+<p><h1>Photos</h1></p>
+<hr>
+
+<% if params[:single] %>
+	<ul id="photos">
+		<li>
+			<%= @photo["id"] %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<%= @photo["title"] %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<%= image_tag(@photo["image"], class: 'media-object') %>
+		</li>
+	</ul>
+<% else %>   
+	<ul id="photos">
+		<% @photos.each do |photo| %>
+			<li>
+			    <%= photo["id"] %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<%= photo["title"] %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<%= image_tag(photo["image"], class: 'media-object') %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>
+ 
+<br>
+
+<div id="flash_message" style="width: 300px; background: yellow; color: red"></div>
+
+<div id="error_messages"></div>
+
+

@@ -1,0 +1,15 @@
+<h3>You can retrieve photos created and stored on <%= link_to "REST API Provider", "https://aqueous-ocean-76425.herokuapp.com" %> 
+application via REST API with an API Key.</h3>
+<br>
+
+<%= link_to "Retrieve all photos", photos_path %>
+or
+<div>
+  Retrieve single photo, id=
+  <%= form_tag photos_path, method: :get do %>
+    <%= hidden_field_tag "single" %>
+    <%= text_field_tag :id %>
+	<%= submit_tag "Submit" %>
+  <% end %>
+</div>
+

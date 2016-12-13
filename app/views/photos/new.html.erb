@@ -1,0 +1,35 @@
+<%= render 'photo_menu' %>
+<br>
+
+<p><h1>Photos</h1></p>
+<hr>
+
+<table style="width:80%">
+  <tr>
+	<th>id</th>
+	<th>photo_title</th>
+	<th></th>
+	<th></th>
+  </tr>   
+
+  <% if !@photos.blank? %>
+    <% @photos.each do |photo| %>
+	  <tr>
+	    <td><%= photo["id"] %></td>
+	    <td><%= photo["title"] %></td>
+        <td><%= link_to "Edit", edit_photo_path(photo["id"]) %></td> 
+	    <td><%= link_to "Delete", photo_path(photo["id"]), method: :delete, data: { confirm: "Are you sure?"} %></td> 	  
+      </tr>
+    <% end %>
+  <% end %>
+
+</table>
+
+<hr>
+ 
+<div id="flash_message" style="width: 300px; background: yellow; color: red"></div>
+
+<div id="error_messages"></div>
+<br>
+
+<%= render 'upload_form' %>

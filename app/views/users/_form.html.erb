@@ -1,0 +1,15 @@
+<h3>You can retrieve user data created and stored on <%= link_to "REST API Provider", "https://aqueous-ocean-76425.herokuapp.com" %> 
+application via REST API.</h3>
+<br>
+<%= link_to "Retrieve all users", root_path %>
+or
+<div>
+  Retrieve single user, id=
+  <%= form_tag root_path, method: :get do %>
+    <%= hidden_field_tag "single" %>
+    <%= text_field_tag :id %>
+	<%= submit_tag "Submit" %>
+  <% end %>
+</div>
+
+

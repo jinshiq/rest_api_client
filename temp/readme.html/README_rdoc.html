@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Environment">Environment</a>
+    <li><a href="#label-Overview">Overview</a>
+    <li><a href="#label-Access+JSON+API">Access JSON API</a>
+    <li><a href="#label-Parse+JSON+API">Parse JSON API</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./README_rdoc.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="./app/assets/javascripts/users_coffee.html">users.coffee</a>
+  
+    <li><a href="./app/assets/stylesheets/application_css_scss.html">application.css.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="./config_ru.html">config.ru</a>
+  
+    <li><a href="./db/production_sqlite3.html">production.sqlite3</a>
+  
+    <li><a href="./log/development_log.html">development.log</a>
+  
+    <li><a href="./log/production_log.html">production.log</a>
+  
+    <li><a href="./log/test_log.html">test.log</a>
+  
+    <li><a href="./public/404_html.html">404.html</a>
+  
+    <li><a href="./public/422_html.html">422.html</a>
+  
+    <li><a href="./public/500_html.html">500.html</a>
+  
+    <li><a href="./public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="./public/robots_txt.html">robots</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.rdoc">
+
+<h4 id="label-Environment">Environment<span><a href="#label-Environment">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Ruby version: 2.2.4</p>
+
+<p>Rails version: 4.2.5.1</p>
+
+<p><a href="http://rubygems.org/gems/social_stream"><img
+src="app/assets/images/access_api_user.png" /></a></p>
+
+<h2 id="label-Overview">Overview<span><a href="#label-Overview">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>This application is a part of <strong>JSON API project</strong>. It shows
+how to retrieve user data/photos from another applciation via API
+with/without API authentication.</p>
+
+<p>The whole <strong>JSON API project</strong> has two applications. This
+application is the support one, called <strong>JSON API Support</strong>. 
+The other one is the main application, called <strong><a
+href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong>.</p>
+
+<p><strong><a href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong> creates user data/photos and APIs,  while <strong>JSON
+API Support</strong> retrieves user data/photos from <strong><a
+href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong>  via APIs with/without authentication.</p>
+
+<p><strong><a href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong> creates two APIs,  one for <strong>User</strong> model
+and the other for <strong>Photo</strong> model.  <strong>User</strong>
+model has text fields only and is designed to require no API authentication
+for API access,  while <strong>Photo</strong> model contains image field
+and is designed to require API authentication.</p>
+
+<p>This application uses <strong>&#39;httparty&#39;</strong> gem to parse JSON
+API and uses <strong>&#39;figaro&#39;</strong> gem to hide sensitive
+information  such as <strong>API_KEY</strong> when accessing
+third-party&#39;s API (i.e. <strong><a
+href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong> API in our case).</p>
+
+<p>The source code is available <strong><a
+href="https://github.com/jinshiq/json_api_support">here at
+github</a></strong>.</p>
+
+<h2 id="label-Access+JSON+API">Access JSON API<span><a href="#label-Access+JSON+API">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>If <strong>API authenticaion</strong> is not requred, e.g.
+<strong>User</strong> api in our case, set url like below.</p>
+
+<pre class="ruby"><span class="ruby-identifier">url</span> = <span class="ruby-string">&quot;https://aqueous-ocean-76425.herokuapp.com/users.json&quot;</span>
+
+<span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;https://aqueous-ocean-76425.herokuapp.com/users/#{params[:id]}.json&quot;</span>
+</pre>
+
+<p>If <strong>API authenticaion</strong> is requred, e.g.
+<strong>Photo</strong> api in our case,  set url like below.</p>
+
+<p>That means a valid <strong>API_KEY</strong> should be passed to url for
+authentication. Such <strong>API_KEY</strong> is stored at
+/config/application.yml which is created by 
+<strong>&#39;figaro&#39;</strong> gem, so API_KEY cannot be seen by other
+people or from browser logs.</p>
+
+<pre class="ruby"><span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;https://aqueous-ocean-76425.herokuapp.com/api/v1/photos.json?token=#{ENV[&#39;API_KEY&#39;]}&quot;</span>
+
+<span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;https://aqueous-ocean-76425.herokuapp.com/api/v1/photos/#{params[:id]}.json?token=#{ENV[&#39;API_KEY&#39;]}&quot;</span>
+</pre>
+
+<h2 id="label-Parse+JSON+API">Parse JSON API<span><a href="#label-Parse+JSON+API">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>There are 4 ways to parse a JSON API with Ruby.</p>
+<ul><li>
+<p><strong>net/http</strong></p>
+</li><li>
+<p><strong>Httparty</strong></p>
+</li><li>
+<p><strong>rest-client</strong></p>
+</li><li>
+<p><strong>Faraday</strong></p>
+</li></ul>
+
+<p><strong>Httparty</strong> is used for this application. Please see details
+below.</p>
+
+<p>&lt;img src=“/app/assets/images/parse_api_user.png.png” /&gt;</p>
+
+<p>The url above doesn&#39;t contain an <strong>API key</strong> since
+<strong>User</strong> API is not required for API authentication according
+to the design of  <strong><a
+href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong> application.</p>
+
+<p>&lt;img src=“/app/assets/images/parse_api_photo.png” /&gt;</p>
+
+<p>The url above contains an <strong>API key</strong> since
+<strong>Photo</strong> API is required for API authentication according to
+the design of <strong><a
+href="https://aqueous-ocean-76425.herokuapp.com/">JSON API
+Main</a></strong> application.</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

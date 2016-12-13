@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>production.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_rdoc.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/users_coffee.html">users.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_css_scss.html">application.css.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../db/production_sqlite3.html">production.sqlite3</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../log/production_log.html">production.log</a>
+  
+    <li><a href="../log/test_log.html">test.log</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/production.log">
+
+<p>I, [2016-05-16T12:18:13.274025 #5600]  INFO – : Started GET “/” for ::1 at
+2016-05-16 12:18:13 -0400 I, [2016-05-16T12:18:13.321028 #5600]  INFO – :
+Processing by <a
+href="../UsersController.html#method-i-index">UsersController#index</a> as
+HTML I, [2016-05-16T12:18:13.343029 #5600]  INFO – : Completed 500 Internal
+Server Error in 22ms (ActiveRecord: 3.0ms) F, [2016-05-16T12:18:13.346029
+#5600] FATAL – :  ActiveRecord::StatementInvalid (Could not find table
+&#39;users&#39;):</p>
+
+<pre>app/controllers/users_controller.rb:8:in `index&#39;</pre>
+
+<p>I, [2016-05-16T12:18:13.408033 #5600]  INFO – : Started GET “/favicon.ico”
+for ::1 at 2016-05-16 12:18:13 -0400 F, [2016-05-16T12:18:13.410033 #5600]
+FATAL – :  ActionController::RoutingError (No route matches [GET]
+“/favicon.ico”):</p>
+
+<pre>actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.5.1) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.5.1) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;</pre>
+
+<p>I, [2016-05-16T12:23:41.985826 #6612]  INFO – : Started GET “/” for ::1 at
+2016-05-16 12:23:41 -0400 I, [2016-05-16T12:23:42.011828 #6612]  INFO – :
+Processing by <a
+href="../UsersController.html#method-i-index">UsersController#index</a> as
+HTML D, [2016-05-16T12:23:42.119834 #6612] DEBUG – :   [1m[36mUser Load
+(1.0ms)[0m  [1mSELECT “users”.* FROM “users”[0m I,
+[2016-05-16T12:23:42.156836 #6612]  INFO – :   Rendered
+users/_user.html.erb (1.0ms) I, [2016-05-16T12:23:42.218839 #6612]  INFO –
+:   Rendered users/_form.html.erb (44.0ms) I, [2016-05-16T12:23:42.219840
+#6612]  INFO – :   Rendered users/index.html.erb within layouts/application
+(102.0ms) I, [2016-05-16T12:23:42.221840 #6612]  INFO – : Completed 200 OK
+in 209ms (Views: 155.4ms | ActiveRecord: 3.0ms) I,
+[2016-05-16T12:23:42.248841 #6612]  INFO – : Started GET
+“/stylesheets/application.css” for ::1 at 2016-05-16 12:23:42 -0400 F,
+[2016-05-16T12:23:42.251841 #6612] FATAL – : 
+ActionController::RoutingError (No route matches [GET]
+“/stylesheets/application.css”):</p>
+
+<pre>actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.5.1) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.5.1) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;</pre>
+
+<p>I, [2016-05-16T12:23:42.269842 #6612]  INFO – : Started GET
+“/javascripts/application.js” for ::1 at 2016-05-16 12:23:42 -0400 F,
+[2016-05-16T12:23:42.271843 #6612] FATAL – : 
+ActionController::RoutingError (No route matches [GET]
+“/javascripts/application.js”):</p>
+
+<pre>actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.5.1) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.5.1) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;</pre>
+
+<p>I, [2016-07-27T21:40:58.211576 #4768]  INFO – : Started GET “/” for ::1 at
+2016-07-27 21:40:58 -0400 I, [2016-07-27T21:40:58.233176 #4768]  INFO – :
+Processing by <a
+href="../UsersController.html#method-i-index">UsersController#index</a> as
+HTML I, [2016-07-27T21:40:58.590197 #4768]  INFO – : Completed 500 Internal
+Server Error in 355ms (ActiveRecord: 0.0ms) F, [2016-07-27T21:40:58.592197
+#4768] FATAL – :  OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0
+state=SSLv3 read server certificate B: certificate verify failed):</p>
+
+<pre>app/controllers/users_controller.rb:13:in `index&#39;</pre>
+
+<p>I, [2016-07-27T21:40:58.637199 #4768]  INFO – : Started GET “/favicon.ico”
+for ::1 at 2016-07-27 21:40:58 -0400 F, [2016-07-27T21:40:58.638200 #4768]
+FATAL – :  ActionController::RoutingError (No route matches [GET]
+“/favicon.ico”):</p>
+
+<pre>actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.5.1) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.5.1) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+c:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;</pre>
+
+<p>I, [2016-07-27T22:15:51.863527 #5544]  INFO – : Started GET “/” for ::1 at
+2016-07-27 22:15:51 -0400 I, [2016-07-27T22:15:51.874527 #5544]  INFO – :
+Processing by <a
+href="../UsersController.html#method-i-index">UsersController#index</a> as
+HTML I, [2016-07-27T22:15:52.115541 #5544]  INFO – : Completed 500 Internal
+Server Error in 240ms (ActiveRecord: 0.0ms) F, [2016-07-27T22:15:52.117541
+#5544] FATAL – :  OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0
+state=SSLv3 read server certificate B: certificate verify failed):</p>
+
+<pre>app/controllers/users_controller.rb:13:in `index&#39;</pre>
+
+<p>I, [2016-07-27T22:15:54.280953 #5544]  INFO – : Started GET “/” for ::1 at
+2016-07-27 22:15:54 -0400 I, [2016-07-27T22:15:54.280953 #5544]  INFO – :
+Processing by <a
+href="../UsersController.html#method-i-index">UsersController#index</a> as
+HTML I, [2016-07-27T22:15:54.415159 #5544]  INFO – : Completed 500 Internal
+Server Error in 134ms (ActiveRecord: 0.0ms) F, [2016-07-27T22:15:54.419159
+#5544] FATAL – :  OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0
+state=SSLv3 read server certificate B: certificate verify failed):</p>
+
+<pre>app/controllers/users_controller.rb:13:in `index&#39;</pre>
+
+<p>I, [2016-07-27T22:25:30.623965 #8896]  INFO – : Started GET “/” for ::1 at
+2016-07-27 22:25:30 -0400 I, [2016-07-27T22:25:30.623965 #8896]  INFO – :
+Processing by <a
+href="../UsersController.html#method-i-index">UsersController#index</a> as
+HTML I, [2016-07-27T22:25:30.938582 #8896]  INFO – : Completed 500 Internal
+Server Error in 315ms (ActiveRecord: 0.0ms) F, [2016-07-27T22:25:30.941582
+#8896] FATAL – :  OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0
+state=SSLv3 read server certificate B: certificate verify failed):</p>
+
+<pre>app/controllers/users_controller.rb:11:in `index&#39;</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

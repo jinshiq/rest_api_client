@@ -1,0 +1,39 @@
+<%= render 'user_menu' %>
+<br>
+
+<%= render 'form' %>
+<br>
+
+<p><h1>Users</h1></p>
+<hr>
+
+<table style="width:80%">
+  <tr>
+	<th>id</th>
+	<th>user_name</th>
+	<th>user_email</th>
+  </tr>   
+ 
+  <% if params[:single] %>
+	<tr>
+		<td><%= @user["id"] %></td>
+		<td><%= @user["name"] %></td>
+		<td><%= @user["email"] %></td>
+	</tr>
+  <% else %>   
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= user["id"] %></td>
+			<td><%= user["name"] %></td>
+			<td><%= user["email"] %></td>
+		</tr>
+	<% end %>
+<% end %>
+ 
+</table> 
+ 
+<br>
+
+<div id="flash_message" style="width: 300px; background: yellow; color: red"></div>
+
+<div id="error_messages"></div>

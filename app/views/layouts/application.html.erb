@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RestApiClient</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container">
+		<div class="navbar-header">
+		  <%= link_to 'REST API (Client)', root_path, class: 'navbar-brand' %>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+		  <ul class="nav navbar-nav">
+		    <li><%= link_to 'About', about_path %></li>
+		    <li><%= link_to 'Users', user_menu_path %></li>
+			<li><%= link_to 'Photos', photo_menu_path %></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+
+	<% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+
+	<div class="container">
+	  <%= yield %>
+	</div>
+
+</body>
+</html>

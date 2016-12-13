@@ -1,0 +1,7 @@
+<%= form_tag users_path, :method => :post do %>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :email %><br>
+  <%= text_field_tag :email %><br>
+  <%= submit_tag "Create User" %>
+<%end%>

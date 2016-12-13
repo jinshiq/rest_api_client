@@ -1,0 +1,18 @@
+<%= render 'photo_menu' %>
+<br>
+
+<p><h1>Show Photo</h1></p>
+<hr>
+
+<%= @photo["id"] %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<%= @photo["title"] %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<%= image_tag(@photo["image"], class: 'media-object') %>
+  
+<br>
+
+<div id="flash_message" style="width: 300px; background: yellow; color: red"></div>
+
+<div id="error_messages"></div>
+<br>
+
+<%= render 'upload_form' %>
