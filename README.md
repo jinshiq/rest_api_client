@@ -9,7 +9,7 @@ Rails version: 4.2.5.1
 
 ##Overview
 
-This ia a <b>REST API</b> client application. It shows how to call REST API from the API provider application <b>'rest_api_provider'</b> and parse the <b>JSON</b> data. 
+This ia a <b>REST API client</b> application. It shows how to call REST API from the API provider application <b>'rest_api_provider'</b> and parse the <b>JSON</b> data. 
 Via this API client application, you can create, read, update and delete data and files on the API provider server.  
 
 The API provider <b>'rest_api_provider'</b> creates two APIs, one for <b>User</b> model and the other for <b>Photo</b> model. 
